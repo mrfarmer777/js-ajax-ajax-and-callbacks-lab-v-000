@@ -46,6 +46,7 @@ function displayCommits(resp){
   const dest=$("#details");
   dest.html(resp.map(c=>{
     return `<div>
+              <img src=${
               <h4>${c.commit.author.name}(${c.author.login})</h4>
               <p>${c.sha}</p>
               
