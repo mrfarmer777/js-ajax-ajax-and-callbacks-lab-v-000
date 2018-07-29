@@ -5,7 +5,7 @@ function searchRepositories(){
   const terms=$('#searchTerms').val().replace(" ","+");
   const query="https://api.giftghub.com/search/repositories?q="+terms;
   $.get(query).done(displayRepositories).fail(function(error){
-    console.log("Sorry, you had an error:"+error);
+    console.log(error);
   });
   /*{
     console.log("Finished");
