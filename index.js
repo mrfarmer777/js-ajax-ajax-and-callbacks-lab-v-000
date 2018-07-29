@@ -46,7 +46,7 @@ function displayCommits(resp){
   const dest=$("#details");
   dest.html(resp.map(c=>{
     return `<div>
-              <h4>${c.author.name}(${c.author.</h4>
+              <h4>${c.commit.author.name}(${c.author.login}</h4>
               
             </div>
   }))
