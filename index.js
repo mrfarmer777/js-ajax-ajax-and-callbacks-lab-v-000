@@ -7,7 +7,7 @@ function searchRepositories(){
   $.get(query).done(function(resp){
     console.log("Finished");
     console.log(resp);
-    $("#repositories").html("<p>Got it!</p>")
+    $("#repositories").html("<p>Got it!</p>");
   });
 }
 
