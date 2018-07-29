@@ -35,10 +35,20 @@ function displayRepositories(resp){
   );
 }
 
-function getCommites(el){
+function getCommits(el){
   const username=el.dataset.username;
   const repository=el.dataset.repository;
-  $.get("https://api.github.com/repo")
+  let query="https://api.github.com/repos/"+username+"/"+repository+"/commits";
+  $.get(query,displayCommits);
+}
+
+function displayCommits(resp){
+  const dest=$("#details");
+  dest.html(resp.map(c=>{
+    return `<div>
+              
+            </div>
+  }))
 }
   
 
