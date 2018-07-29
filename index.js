@@ -5,7 +5,7 @@ function searchRepositories(){
   const terms=$('#searchTerms').val().replace(" ","+");
   const query="https://api.github.com/search/repositories?q="+terms;
   $.get(query,function(response){
-    $("#results").html(response);
+    $("#results").html(JSON.parse(response));
   });
   
 }
