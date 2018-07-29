@@ -10,7 +10,8 @@ function searchRepositories(){
     $("#results").html("<ul>"+resp.items.map(i=>{
       return `
       <div>
-        <h2>${i.name}</h2></div>`})
+        <h2>${i.name}</h2>
+        <p>${i.description</div>`})
     );
   });
 }
