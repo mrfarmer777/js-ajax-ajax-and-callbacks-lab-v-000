@@ -7,6 +7,8 @@ function searchRepositories(){
   $.get(query,function(response){
     $("#repositories").html(response);
     
-  });
+  }.fail(function(error){
+    console.log(error);
+  }));
   
 }
