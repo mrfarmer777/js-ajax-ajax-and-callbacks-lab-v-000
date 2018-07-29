@@ -34,5 +34,11 @@ function displayRepositories(resp){
     </div>`})
   );
 }
+
+function getCommites(el){
+  const username=el.dataset.username;
+  const repository=el.dataset.repository;
+  $.get("https://api.github.com/repo")
+}
   
 
