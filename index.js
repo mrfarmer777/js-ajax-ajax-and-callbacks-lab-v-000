@@ -8,7 +8,7 @@ function searchRepositories(){
     console.log("Finished");
     console.log(resp.items[0].name);
     $("#results").html("<ul>"+resp.items.map(i=>{
-      `<li>${i.name}</li>`})+"</ul>"
+      return `<li>${i.name}</li>`})+"</ul>"
     );
   });
 }
