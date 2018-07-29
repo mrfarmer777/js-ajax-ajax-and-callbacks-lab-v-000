@@ -12,7 +12,7 @@ function searchRepositories(){
       <div>
         <h2><a href="${i.html_url}">${i.name}</a></h2>
         <p>${i.description}</p>
-        <h5>Created By:<a href="${i.owner.url}">${i.owner.login}</a></h5>
+        <h5>Created By: <a href="${i.owner.url}">${i.owner.login}</a></h5>
       </div>`})
     );
   });
