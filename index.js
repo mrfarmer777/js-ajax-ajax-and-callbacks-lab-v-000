@@ -20,7 +20,7 @@ function searchRepositories(){
 }
 
 
-function displayRepositories(){
+function displayRepositories(resp){
   console.log("Finished");
   console.log(resp.items[0].name);
   $("#results").html(resp.items.map(i=>{
