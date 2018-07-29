@@ -9,3 +9,9 @@ function searchRepositories(){
     console.log(resp);
   });
 }
+
+
+function displayRepositories(){
+  let dest=$("#repositories");
+  
+}
