@@ -4,7 +4,9 @@ $(document).ready(function (){
 function searchRepositories(){
   const terms=$('#searchTerms').val().replace(" ","+");
   const query="https://api.github.com/search/repositories?q="+terms;
-  $.get(query).done(displayRepositories);
+  $.get(query).done(displayRepositories).error(function(error){
+    console.log("Sorry, you had an error:"+error);
+  });
   /*{
     console.log("Finished");
     console.log(resp.items[0].name);
