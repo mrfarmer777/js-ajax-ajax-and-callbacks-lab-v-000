@@ -41,7 +41,8 @@ function getCommits(el){
   const username=el.dataset.username;
   const repository=el.dataset.repository;
   let query="https://api.github.com/repos/"+username+"/"+repository+"/commits";
-  $.get(query,displayCommits);
+  $.get(query).done(displayCommits).fail(function(error){
+    console.log("Sorry there was an error. Please try again.");
 }
 
 function displayCommits(resp){
