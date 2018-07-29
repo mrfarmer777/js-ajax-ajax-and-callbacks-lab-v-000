@@ -4,7 +4,9 @@ $(document).ready(function (){
 function searchRepositories(){
   const terms=$('#searchTerms').val().replace(" ","+");
   const query="https://api.github.com/search/repositories?q="+terms;
-  $.get(query).done(function(resp){
+  $.get(query).done(displayRepositories(resp));
+  /*
+  {
     console.log("Finished");
     console.log(resp.items[0].name);
     $("#results").html(resp.items.map(i=>{
@@ -16,9 +18,8 @@ function searchRepositories(){
         <a href="#" onclick="getCommits(this)" data-username="${i.owner.login}" data-repository="${i.name}">Get Commits</a>
       </div>`})
     );
-  });
+  });*/
 }
-
 
 function displayRepositories(resp){
   console.log("Finished");
