@@ -46,7 +46,7 @@ function displayCommits(resp){
   const dest=$("#details");
   dest.html(resp.map(c=>{
     return `<div>
-              
+              <h4>${c.</h4>
             </div>
   }))
 }
