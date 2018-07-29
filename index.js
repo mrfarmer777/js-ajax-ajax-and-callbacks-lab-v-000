@@ -46,12 +46,11 @@ function displayCommits(resp){
   const dest=$("#details");
   dest.html(resp.map(c=>{
     return `<div>
-              <img src=${
+              <img src="${c.author.avatar_url}"/>
               <h4>${c.commit.author.name}(${c.author.login})</h4>
               <p>${c.sha}</p>
-              
-            </div>
-  }))
+            </div>`;
+  }));
 }
   
 
