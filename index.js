@@ -42,7 +42,7 @@ function getCommits(el){
   const repository=el.dataset.repository;
   let query="https://api.github.com/repos/"+username+"/"+repository+"/commits";
   $.get(query).done(displayCommits).fail(function(error){
-    console.log("Sorry there was an error. Please try again.");
+    console.log("Sorry there was an error. Please try again.")});
 }
 
 function displayCommits(resp){
