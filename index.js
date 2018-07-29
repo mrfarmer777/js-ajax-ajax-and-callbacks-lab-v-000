@@ -6,6 +6,6 @@ function searchRepositories(){
   const query="https://api.github.com/search/repositories?q="+terms;
   $.get(query,function(response){
     
-    $()
+    $("#results").
   })
 }
