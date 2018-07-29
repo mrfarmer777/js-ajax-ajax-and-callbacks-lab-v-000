@@ -7,7 +7,7 @@ function searchRepositories(){
   $.get(query).done(function(resp){
     console.log("Finished");
     console.log(resp.items[0].name);
-    $("#results").html("<ul>"+resp.items.map(i=>{
+    $("#results").html(resp.items.map(i=>{
       return `
       <div>
         <h2><a href="${i.html_url}">${i.name}</a></h2>
