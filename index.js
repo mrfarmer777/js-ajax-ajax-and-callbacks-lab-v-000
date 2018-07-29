@@ -8,8 +8,8 @@ function searchRepositories(){
     console.log("Finished");
     console.log(typeof resp);
     $("#results").html("<ul>"+resp.items.map(i=>{
-      `<li>${i.name}</li>`}+"</ul>"
-    ));
+      `<li>${i.name}</li>`})+"</ul>"
+    );
   });
 }
 
