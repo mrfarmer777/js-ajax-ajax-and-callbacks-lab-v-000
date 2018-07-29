@@ -8,7 +8,9 @@ function searchRepositories(){
     console.log("Finished");
     console.log(resp.items[0].name);
     $("#results").html("<ul>"+resp.items.map(i=>{
-      return `<li>${i.name}</li>`})+"</ul>"
+      return `
+      <div>
+        <h2>${i.name}</h2></div>`})
     );
   });
 }
