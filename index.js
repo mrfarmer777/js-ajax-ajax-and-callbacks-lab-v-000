@@ -6,7 +6,7 @@ function searchRepositories(){
   const query="https://api.github.com/search/repositories?q="+terms;
   $.get(query).done(function(resp){
     console.log("Finished");
-    console.log(resp);
+    console.log(typeof resp);
     $("#results").html(resp[0]["name"]);
   });
 }
