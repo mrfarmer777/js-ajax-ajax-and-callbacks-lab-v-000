@@ -4,9 +4,8 @@ $(document).ready(function (){
 function searchRepositories(){
   const terms=$('#searchTerms').val().replace(" ","+");
   const query="https://api.github.com/search/repositories?q="+terms;
-  $.get(query).done(displayRepositories(resp));
-  /*
-  {
+  $.get(query).done(displayRepositories());
+  /*{
     console.log("Finished");
     console.log(resp.items[0].name);
     $("#results").html(resp.items.map(i=>{
@@ -20,6 +19,7 @@ function searchRepositories(){
     );
   });*/
 }
+
 
 function displayRepositories(resp){
   console.log("Finished");
