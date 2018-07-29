@@ -3,5 +3,6 @@ $(document).ready(function (){
 
 function searchRepositories(){
   const terms=$('#searchTerms').val().replace(" ","+");
-  console.log(terms);
+  const query="q="+terms;
+  console.log(query);
 }
