@@ -7,7 +7,9 @@ function searchRepositories(){
   $.get(query).done(function(resp){
     console.log("Finished");
     console.log(typeof resp);
-    $("#results").html(resp.items.length);
+    $("#results").html("<ul>"+resp.items.map(i=>{
+      `<li>${i.name}</li>`}+"</ul>"
+    ));
   });
 }
 
